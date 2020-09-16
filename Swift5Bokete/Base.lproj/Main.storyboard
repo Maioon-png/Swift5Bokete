@@ -37,16 +37,25 @@
                                 <rect key="frame" x="87" y="652" width="245" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="次のお題へ"/>
+                                <connections>
+                                    <action selector="nextOdai:" destination="BYZ-38-t0r" eventType="touchUpInside" id="lyX-ql-66W"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Nza-Ex-Tp7">
                                 <rect key="frame" x="82" y="722" width="245" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="決定"/>
+                                <connections>
+                                    <action selector="next:" destination="BYZ-38-t0r" eventType="touchUpInside" id="8LD-UJ-bH9"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xee-tN-jtU">
                                 <rect key="frame" x="319" y="95" width="59" height="59"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" image="search"/>
+                                <connections>
+                                    <action selector="serachAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="iNu-Ur-87H"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemGreenColor" red="0.20392156859999999" green="0.78039215689999997" blue="0.34901960780000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -56,16 +65,17 @@
                         <outlet property="commentTextView" destination="WNT-3K-tSt" id="HnV-w6-Syk"/>
                         <outlet property="odaiImageView" destination="kaM-n4-Crj" id="NLC-Zw-3kp"/>
                         <outlet property="searchTextField" destination="FuN-JQ-hE5" id="hwL-8j-uGz"/>
+                        <segue destination="YaO-Hd-xvO" kind="presentation" identifier="next" modalPresentationStyle="fullScreen" id="mFh-Tz-eFi"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="113.04347826086958" y="81.696428571428569"/>
         </scene>
-        <!--View Controller-->
+        <!--Share View Controller-->
         <scene sceneID="9q0-mJ-Uve">
             <objects>
-                <viewController id="YaO-Hd-xvO" sceneMemberID="viewController">
+                <viewController id="YaO-Hd-xvO" customClass="ShareViewController" customModule="Swift5Bokete" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="6ni-36-LK9">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -89,11 +99,17 @@
                                 <rect key="frame" x="109" y="694" width="196" height="38"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="シェアする"/>
+                                <connections>
+                                    <action selector="share:" destination="YaO-Hd-xvO" eventType="touchUpInside" id="vdG-oH-XoW"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vTO-PD-Hme">
                                 <rect key="frame" x="109" y="750" width="196" height="38"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="戻る"/>
+                                <connections>
+                                    <action selector="back:" destination="YaO-Hd-xvO" eventType="touchUpInside" id="4pp-7l-Exm"/>
+                                </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="5" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ajv-Ig-os6">
                                 <rect key="frame" x="82" y="474" width="250" height="132"/>
@@ -106,6 +122,10 @@
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <viewLayoutGuide key="safeArea" id="Hq4-q1-a1T"/>
                     </view>
+                    <connections>
+                        <outlet property="commentLabel" destination="Ajv-Ig-os6" id="xEr-4U-v7t"/>
+                        <outlet property="resultImageView" destination="Jbp-gS-Nyd" id="TAW-HE-FuQ"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="wLq-fK-ils" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
