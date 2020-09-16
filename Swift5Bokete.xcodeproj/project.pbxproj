@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -14,6 +14,7 @@
 		B40A037A2511E2180089FF05 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B40A03782511E2180089FF05 /* Main.storyboard */; };
 		B40A037C2511E21C0089FF05 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B40A037B2511E21C0089FF05 /* Assets.xcassets */; };
 		B40A037F2511E21C0089FF05 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B40A037D2511E21C0089FF05 /* LaunchScreen.storyboard */; };
+		B40A03872511FF7F0089FF05 /* ShareViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B40A03862511FF7F0089FF05 /* ShareViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +27,7 @@
 		B40A037B2511E21C0089FF05 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		B40A037E2511E21C0089FF05 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		B40A03802511E21C0089FF05 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B40A03862511FF7F0089FF05 /* ShareViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShareViewController.swift; sourceTree = "<group>"; };
 		CD8814BA2FE8F2302C8AF9A8 /* Pods-Swift5Bokete.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Swift5Bokete.release.xcconfig"; path = "Target Support Files/Pods-Swift5Bokete/Pods-Swift5Bokete.release.xcconfig"; sourceTree = "<group>"; };
 		EFEB57C9AECE3DC5495EDE78 /* Pods_Swift5Bokete.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Swift5Bokete.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -56,7 +58,6 @@
 				13FB49E98D4C8D423BF94E72 /* Pods-Swift5Bokete.debug.xcconfig */,
 				CD8814BA2FE8F2302C8AF9A8 /* Pods-Swift5Bokete.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -88,6 +89,7 @@
 				B40A037B2511E21C0089FF05 /* Assets.xcassets */,
 				B40A037D2511E21C0089FF05 /* LaunchScreen.storyboard */,
 				B40A03802511E21C0089FF05 /* Info.plist */,
+				B40A03862511FF7F0089FF05 /* ShareViewController.swift */,
 			);
 			path = Swift5Bokete;
 			sourceTree = "<group>";
@@ -209,6 +211,7 @@
 			files = (
 				B40A03772511E2180089FF05 /* ViewController.swift in Sources */,
 				B40A03732511E2180089FF05 /* AppDelegate.swift in Sources */,
+				B40A03872511FF7F0089FF05 /* ShareViewController.swift in Sources */,
 				B40A03752511E2180089FF05 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
