@@ -14,7 +14,7 @@ import SDWebImage
 //許可画面
 import Photos
 
-class ViewController: UIViewController {
+class ViewController: UIViewController, UITextFieldDelegate, UITextViewDelegate {
 
     @IBOutlet weak var odaiImageView: UIImageView!
     
@@ -26,6 +26,9 @@ class ViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        commentTextView.delegate = self
+        searchTextField.delegate = self
         
         //imageViewの角丸
         commentTextView.layer.cornerRadius = 20.0
@@ -111,6 +114,17 @@ class ViewController: UIViewController {
         let shareVC = segue.destination as? ShareViewController
         shareVC?.commentString = commentTextView.text
         shareVC?.resultImage = odaiImageView.image!
+        
+    }
+
+    //タッチでキーボードを閉じる
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+        view.endEditing(true)
+    }
+    //リターンキーでキーボードを閉じる
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        textField.resignFirstResponder()
+        return true
         
     }
     
